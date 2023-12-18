@@ -17,8 +17,8 @@ public class _0121_BestTimeToBuyAndSellStock {
     }
 
     private static int calculateTheMaxProfit(int[] nums) {
-        int maxProfit = Integer.MIN_VALUE;
-        int lowBuyingPrice = Integer.MAX_VALUE;
+        int maxProfit = 0;
+        int lowBuyingPrice = nums[0];
         for (int num : nums) {
             if (num < lowBuyingPrice) {
                 lowBuyingPrice = num;
