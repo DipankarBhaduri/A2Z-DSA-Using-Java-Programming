@@ -18,17 +18,11 @@ public class _0118_PascalsTriangle {
 
     private static List<List<Integer>> getPascalTrianglesList(int nth) {
         List<List<Integer>> list = new ArrayList<>();
-        if (nth == 1) {
-            list.add(new ArrayList<>(Arrays.asList(1)));
-            return list;
-        }
-        if (nth == 2) {
-            list.add(new ArrayList<>(Arrays.asList(1)));
-            list.add(new ArrayList<>(Arrays.asList(1,1)));
-            return list;
-        }
         list.add(new ArrayList<>(Arrays.asList(1)));
+        if (nth == 1)  return list;
+
         list.add(new ArrayList<>(Arrays.asList(1,1)));
+        if (nth == 2) return list;
 
         for (int i = 2; i < nth; i++) {
             List<Integer> integerList = new ArrayList<>();
