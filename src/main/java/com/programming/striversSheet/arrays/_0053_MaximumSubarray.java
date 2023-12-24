@@ -1,4 +1,4 @@
-package com.programming.striversSheet;
+package com.programming.striversSheet.arrays;
 
 import java.util.Scanner;
 

@@ -23,29 +23,28 @@ public class _0031_NextPermutation {
             return nums;
         }
         // finding the break point
-        int length = nums.length - 2;
-        while (length >= 0) {
-            if (nums[length] < nums[length + 1]) {
+        int length = nums.length - 1;
+        while (length > 0) {
+            if (nums[length - 1] < nums[length]) {
                 break;
             }
             length --;
         }
 
-        if (length == -1) {
+        if (length == 0) {
             Arrays.sort(nums);
             return nums;
         }
-        return performShorting(nums, length + 1);
+        return performShorting(nums, length);
     }
 
     private static int[] performShorting(int[] nums, int length) {
-        for (int i = length; i < nums.length; i++) {
-            for (int j = i + 1; j < nums.length; j++) {
-                if (nums[i] > nums[j]) {
-                    int temp = nums[i];
-                    nums[i] = nums[j];
-                    nums[j] = temp;
-                }
+        for (int i = nums.length - 1; i > length; i--) {
+            if (nums[i] > nums[length]) {
+                int temp = nums[i];
+                nums[length] = nums[i];
+                nums[i] = temp;
+                break;
             }
         }
         return nums;
