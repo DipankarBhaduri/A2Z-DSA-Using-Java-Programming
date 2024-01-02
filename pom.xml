@@ -9,7 +9,7 @@
 		<relativePath/>
 	</parent>
 	<groupId>com</groupId>
-	<artifactId>Master_In_Java_Programming</artifactId>
+	<artifactId>A2Z-DSA-Using-Java-Programming</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>Master_Java_Programming</name>
 	<description>Demo project for Spring Boot</description>
