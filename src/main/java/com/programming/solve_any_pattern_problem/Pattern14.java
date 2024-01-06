@@ -2,14 +2,16 @@ package com.programming.solve_any_pattern_problem;
 
 import java.util.Scanner;
 
-public class Pattern11 {
+public class Pattern14 {
     public static void main(String[] args) {
         /*
-         1
-         0 1
-         1 0 1
-         0 1 0 1
-         1 0 1 0 1
+        A
+        AB
+        ABC
+        ABCD
+        ABCDE
+        ABCDEF
+        ABCDEFG
          */
         Scanner scanner = new Scanner(System.in);
         int t = scanner.nextInt();
@@ -20,12 +22,14 @@ public class Pattern11 {
     }
 
     private static void printThePattern(int n) {
+        int value = 65;
         for (int i = 1; i <= n; i++) {
-            int flag = i % 2;
             for (int j = 1; j <= i; j++) {
-                System.out.print(flag+" ");
-                flag = 1 - flag;
+                char ch = (char) value;
+                System.out.print(ch);
+                value++;
             }
+            value = 65;
             System.out.println();
         }
     }
