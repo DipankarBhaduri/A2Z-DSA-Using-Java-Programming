@@ -7,11 +7,11 @@ public class CheckPalindrome {
         Scanner scanner = new Scanner(System.in);
         String input = scanner.next();
         boolean isPalindrome = checkPalindrome(input);
-        System.out.print("Is Palindrome : " +isPalindrome);
+        System.out.println("Is Palindrome : " +isPalindrome);
     }
     public static boolean checkPalindrome(String s) {
         int start = 0;
-        int end = s.length();
+        int end = s.length() - 1;
         while (start < end) {
             if (s.charAt(start) != s.charAt(end)) {
                 return false;
