@@ -12,6 +12,6 @@ public class LinearPrint1ToNUsingBackTracking {
         }
 
         print1ToN(i+1, num);
-
+        System.out.println(num - i);
     }
 }
